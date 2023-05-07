@@ -18,10 +18,10 @@ let data
 post.findAll()
 .then(res=>{
      console.log('findbycriteria ',res)
-     data = res
+     res.send(res)
     })
 .catch(err=>console.log('findbycriteria Err ',err))
-res.send(data)
+
 })
 
 export default Post
