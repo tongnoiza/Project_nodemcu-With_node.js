@@ -14,7 +14,13 @@ res.send('state insert '+state)
 
 Post.get('/findbycriteria',(req,res)=>{
     console.log('post findbycriteria ',req.body);
-let data = post.findAll().catch(err=>console.log)
+let data 
+post.findAll()
+.then(res=>{
+     console.log('findbycriteria ',res)
+     data = res
+    })
+.catch(err=>console.log('findbycriteria Err ',err))
 res.send(data)
 })
 
