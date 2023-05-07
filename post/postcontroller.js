@@ -3,10 +3,9 @@ import post from './postdb.js'
 
 const Post = express.Router()
 Post.get('/insert',(req,res)=>{
-    let state
+    
     console.log('post insert ',req.body);
- post.create(req.body).then(resualt=>{
-    state = resualt
+ let state = post.create(req.body).then(resualt=>{
     console.log('resualt ',resualt);
  }).catch(err=>console.log('Err ',err))
 res.send('state insert '+state)
