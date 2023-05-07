@@ -5,7 +5,7 @@ const Post = express.Router()
 Post.get('/insert',(req,res)=>{
     console.log('post insert ',req.body);
 let state =  post.create(req.body)
-res.send('state insert ',state)
+res.send('state insert '+state)
 })
 
 Post.get('/findbycriteria',(req,res)=>{
