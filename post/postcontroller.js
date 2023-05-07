@@ -2,10 +2,10 @@ import express  from 'express'
 import post from './postdb.js'
 
 const Post = express.Router()
-Post.get('/insert',(req,res)=>{
+Post.get('/insert',async (req,res)=>{
     console.log('post insert ',req.body);
-let state = post.create(req.body)
-res.send('state insert '+state)
+let state = await post.create(req.body)
+res.send('state insert ',state)
 })
 
 Post.get('/findbycriteria',async (req,res)=>{
