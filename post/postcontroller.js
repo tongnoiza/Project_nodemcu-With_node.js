@@ -8,7 +8,7 @@ Post.get('/insert',(req,res)=>{
  post.create(req.body).then(resualt=>{
     state = resualt
     console.log('resualt ',resualt);
- }).catch(err=>console.log())
+ }).catch(err=>console.log('Err ',err))
 res.send('state insert '+state)
 })
 
