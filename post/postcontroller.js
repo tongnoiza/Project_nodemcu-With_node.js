@@ -14,14 +14,12 @@ res.send('state insert '+state)
 
 Post.get('/findbycriteria',(req,res)=>{
     console.log('post findbycriteria ',req.body);
-let data =null
-post.findAll()
-.then(async res=>{
-    data = await res.json()
-     console.log('findbycriteria ',res)
-    })
+
+const data = post.findAll()
+.then(res=> res.json())
+.then(res => res)
 .catch(err=>console.log('findbycriteria Err ',err))
-res.send(res)
+res.send(data)
 })
 
 export default Post
