@@ -10,7 +10,7 @@ res.send('insert post')
 
 Post.get('/findbycriteria',async (req,res)=>{
     console.log('post insert ',req.body);
-let data = await post.findAll({ where: req.body})
+let data = await post.findAll()
 res.send(data)
 })
 
