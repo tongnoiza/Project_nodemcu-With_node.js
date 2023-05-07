@@ -4,13 +4,13 @@ import post from './postdb.js'
 const Post = express.Router()
 Post.get('/insert',(req,res)=>{
     console.log('post insert ',req.body);
-post.create(req.body)
-res.send('insert post')
+let state = post.create(req.body)
+res.send('state insert '+state)
 })
 
 Post.get('/findbycriteria',async (req,res)=>{
     console.log('post findbycriteria ',req.body);
-let data = await post.findAll()
+let data = await post.findAll().catch(err=>console.log)
 res.send(data)
 })
 
