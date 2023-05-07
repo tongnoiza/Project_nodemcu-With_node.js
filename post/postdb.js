@@ -27,7 +27,7 @@ import { Sequelize, Model, DataTypes } from 'sequelize';
                
               });
               (async () => {
-                // await sequelize.sync({ force: true });
+                await sequelize.sync({ force: true });
                 // Code here
               })();
           } catch (error) {
