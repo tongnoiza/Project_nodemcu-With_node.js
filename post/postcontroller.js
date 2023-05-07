@@ -9,7 +9,7 @@ res.send('insert post')
 })
 
 Post.get('/findbycriteria',async (req,res)=>{
-    console.log('post insert ',req.body);
+    console.log('post findbycriteria ',req.body);
 let data = await post.findAll()
 res.send(data)
 })
