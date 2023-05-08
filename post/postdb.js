@@ -5,6 +5,7 @@ import { Sequelize, Model, DataTypes } from 'sequelize';
             port:5432,
             dialect:  'postgres'
           });
+          
               let post
         try {
             await sequelize.authenticate();
@@ -27,7 +28,7 @@ import { Sequelize, Model, DataTypes } from 'sequelize';
                
               });
               (async () => {
-                await sequelize.sync({ force: true });
+                // await sequelize.sync({ force: true });
                 // Code here
               })();
           } catch (error) {
