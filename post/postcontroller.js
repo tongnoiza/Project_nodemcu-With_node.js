@@ -12,13 +12,17 @@ res.send('state insert '+state)
 
 Post.get('/findbycriteria',(req,res)=>{
     console.log('post findbycriteria ',req.body);
-post.findAll()
+ post.findAll()
 .then(data=> {
     res.send(data)
 }).catch(err=>{
     res.send(err)
 })
-
 })
 
+Post.get('/find',async (req,res)=>{
+    console.log('post findbycriteria ',req.body);
+const data = await post.findAll()
+    res.send(data)
+})
 export default Post
