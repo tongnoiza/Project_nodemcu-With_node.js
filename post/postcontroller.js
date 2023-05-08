@@ -9,6 +9,10 @@ Post.get('/insert',async (req,res)=>{
  }).catch(err=>console.log('Err ',err))
 res.send('state insert '+state)
 })
+Post.get('/create',async (req,res)=>{
+ let state = await post.create(req.body)
+res.send('state insert '+state)
+})
 
 Post.get('/findbycriteria',(req,res)=>{
     console.log('post findbycriteria ',req.body);
@@ -22,7 +26,7 @@ Post.get('/findbycriteria',(req,res)=>{
 
 Post.get('/find',async (req,res)=>{
     console.log('post findbycriteria ',req.body);
-const data = await post.findAll()
+    const data = await post.findAll()
     res.send(data)
 })
 export default Post
