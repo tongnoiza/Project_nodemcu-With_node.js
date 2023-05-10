@@ -17,7 +17,7 @@ import sequelize from './../configdb.js'
                 }
               });
               (async () => {
-                // await sequelize.sync({ force: true });
+                await sequelize.sync({ force: true });
                 // Code here
               })();
           } catch (error) {
