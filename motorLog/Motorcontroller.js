@@ -3,9 +3,9 @@ import Motorlogging from './MotorDB.js';
 
 const Router = express.Router()
 
-Router.get('/insert/:status/:motor_no',async (req,res)=>{
-console.log('Mortor insert ',req.params);
-await Motorlogging.create(req.params)
+Router.get('/insert',async (req,res)=>{
+console.log('Mortor insert ',req.query);
+await Motorlogging.create(req.query)
 res.send(req.params)
 })
 
