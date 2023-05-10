@@ -6,7 +6,7 @@ const Router = express.Router()
 Router.get('/insert',async (req,res)=>{
 console.log('Mortor insert ',req.query);
 await Motorlogging.create(req.query)
-res.send(req.params)
+res.send(req.query)
 })
 
 Router.get('/findbycriteria',async (req,res)=>{
