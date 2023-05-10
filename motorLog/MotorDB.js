@@ -12,7 +12,7 @@ import sequelize from './../configdb.js'
                   allowNull: false
                 },
                 motor_no: {
-                  type: DataTypes.INTEGER
+                  type: DataTypes.STRING
                   // allowNull defaults to true
                 }
               });
