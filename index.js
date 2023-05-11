@@ -23,6 +23,6 @@ const port = process.env.PORT ||443
 // app.use('/Comment',comment)
 
 app.use('/LogState',Motor)
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
