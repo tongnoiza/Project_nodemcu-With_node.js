@@ -6,7 +6,9 @@ import comment from './comment/comment.js';
 import bodyParser from 'body-parser'
 import cors from 'cors'
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin:'*'
+}))
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*'); //หรือใส่แค่เฉพาะ domain ที่ต้องการได้
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
