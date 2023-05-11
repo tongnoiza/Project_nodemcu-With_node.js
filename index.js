@@ -18,7 +18,7 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
-const port = 3000 | process.env.port
+const port = process.env.PORT || 3000 
 app.use('/post',Post)
 app.use('/User',User)
 app.use('/LogState',Motor)
