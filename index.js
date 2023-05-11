@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
-const port = process.env.PORT ||443
+const port = process.env.PORT || 443
 // app.use('/post',Post)
 // app.use('/User',User)
 // app.use('/Comment',comment)
