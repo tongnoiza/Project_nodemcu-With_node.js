@@ -3,7 +3,7 @@ import express  from 'express'
 // import User from './user/UserController.js';
 // import comment from './comment/comment.js';
 
-import Motor from './motorLog/Motorcontroller.js';
+// import Motor from './motorLog/Motorcontroller.js';
 import bodyParser from 'body-parser'
 import cors from 'cors'
 const app = express()
@@ -17,7 +17,7 @@ app.use(cors())
 // });
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
-const port = 80;
+const port = 443;
 // app.use('/post',Post)
 // app.use('/User',User)
 // app.use('/Comment',comment)
@@ -25,7 +25,7 @@ app.get('/test',(req,res)=>{
   console.log('query: ',req.query);
   res.send(req.query)
 })
-app.use('/LogState',Motor)
+// app.use('/LogState',Motor)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
