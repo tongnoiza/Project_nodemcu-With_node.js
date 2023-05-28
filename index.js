@@ -7,6 +7,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 const app = express()
 app.use(cors(
+  
   {
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -16,9 +17,12 @@ app.use(cors(
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 const port = 3001;
-app.use('/post',Post)
-app.use('/Comment',comment)
-
+// app.use('/post',Post)
+// app.use('/Comment',comment)
+app.get('/t',(req,res)=>{
+console.log(req.query);
+  res.send(req.query)
+})
 // app.use('/User',User)
 // app.use('/LogState',Motor)
 app.listen(port, () => {
