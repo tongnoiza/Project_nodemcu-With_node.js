@@ -8,7 +8,7 @@ import cors from 'cors'
 const app = express()
 app.use(cors(
   {
-    origin: process.env.HOST_NAME,
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   }
