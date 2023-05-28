@@ -11,7 +11,9 @@ import sequelize from './../configdb.js'
                 //   type: DataTypes.STRING,
                 //   allowNull: false
                 // },
-                
+                PostUser:{
+                  type: DataTypes.STRING
+                },
                 PostHeader: {
                   type: DataTypes.STRING
                   // allowNull defaults to true
@@ -23,7 +25,7 @@ import sequelize from './../configdb.js'
                
               });
               (async () => {
-                await sequelize.sync({ force: true });
+                // await sequelize.sync({ force: true });
                 // Code here
               })();
           } catch (error) {
